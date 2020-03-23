@@ -13,8 +13,8 @@ label = "label"
 data = pd.read_csv("data/data.csv")
 
 # Split the scores
-# data[label] = data[label].shift(-1)
-# data.dropna(inplace=True)
+data[label] = data[label].shift(-1)
+data.dropna(inplace=True)
 X = data.drop(label, axis=1)
 y = data[label]
 
